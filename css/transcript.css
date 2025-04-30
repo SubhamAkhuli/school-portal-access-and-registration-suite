@@ -1,0 +1,87 @@
+.table-borderless td,
+.table-borderless th {
+    border: none !important;
+}
+
+.table-borderless {
+    border-collapse: collapse;
+}
+
+.transcriptTable #student-name-box span{
+    background-color: #456fb6;
+    padding: 8px;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.transcriptTable #student-name-box h2{
+    display: inline;
+    color: #456fb6;
+    margin-left: 15px;
+    font-weight: 400;
+}
+.course-data{
+    vertical-align: middle !important;
+}
+.course-grade{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.transcriptTable tr:nth-child(2) td:nth-child(1) {
+    padding-left: 47px;
+    width: 10%;
+}
+.transcriptTable tr:nth-child(2) td:nth-child(2) {
+    width: 30%;
+}
+.transcriptTable tr:nth-child(2) td{
+   font-weight: bold !important;
+}
+.transcriptTable tr:nth-child(3) td{
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color:#456fb6 !important;
+    color: #fff;
+    /* text-align: center !important; */
+}
+.transcriptTable tr:nth-child(3) td:nth-child(3){
+    /* border-radius: 0 100px 100px 0; */
+}
+.transcriptTable tr:nth-child(3) td{
+    border-bottom: 5px solid;
+    border-top: 10px solid;
+}
+.transcriptTable tr td:nth-child(3){
+    background-color: #58595b;
+    color: #fff;
+}
+.subjectBox:nth-child(even) {
+ background-color: #dcddde;
+ font-size: 20px;
+ font-weight: bold;
+}
+.subjectBox:nth-child(odd){
+ background-color: #c7c8ca;
+ font-size: 20px;
+ font-weight: bold;
+
+}
+.subjectBox td:nth-child(3){
+    border-bottom: 2px solid #ffffff4f;
+}
+
+.subjectBox td:nth-child(2),.subjectBox td:nth-child(1){
+    border-bottom: 2px solid #00000036;
+}
+.transcriptTable tbody tr,.transcriptTable thead tr th,.transcriptTable{
+    /* border: none !important; */
+}
+.addYear{
+    float:right !important;
+}
+.table td, .table th {
+    vertical-align: middle !important;
+}

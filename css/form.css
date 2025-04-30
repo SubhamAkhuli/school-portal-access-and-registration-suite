@@ -1,0 +1,953 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+.selectCourse p {
+    color: black;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+}
+
+#reg_add_course_area select {
+    border: none;
+    border-bottom: 1px solid #6c757d;
+    padding: 0.5rem;
+    padding-bottom: 5px;
+    background: transparent;
+    color: black;
+    overflow: auto;
+}
+
+#reg_add_course_area input {
+    background: transparent;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.8) url("../img/loader.gif") center no-repeat;
+}
+
+/* Turn off scrollbar when body element has the loading class */
+body.loading {
+    overflow: hidden;
+}
+
+/* Make spinner image visible when body element has the loading class */
+body.loading .overlay {
+    display: block;
+}
+
+body {
+    text-align: center;
+}
+
+#card_number,
+#card_cvc,
+#card_expiry {
+    background-color: #e8e8e8;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+#card_number {
+    margin-bottom: 23px;
+}
+
+#add_course_plus_icon {
+    position: unset !important;
+    border: 1px solid;
+    padding: 5px 15px;
+    /* text-align: right; */
+    /* float: right; */
+    /* cursor: pointer; */
+}
+
+#reg_add_course_area .badge {
+    /* width: 70px;
+    padding: 10px; */
+    width: 60px;
+    padding: 5px;
+}
+
+#reg_add_course_area .row {
+    border-bottom: 1px solid #00000045;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* .select_center option:nth-child(2) {
+    padding-left: calc(35% - 1em) !important;
+} */
+.select_center {
+    width: 400px;
+    text-align-last: center;
+}
+
+
+.highlight {
+    background-color: #acd3ef !important;
+}
+
+.reg_1 {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+.reg_1 .badge {
+    width: 100%;
+    padding: 12px 0px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.reg_1 .badge:hover {
+    /* background-color:#acd3ef; */
+}
+
+.reg_1 label {
+    margin-top: 8px;
+    font-size: 100%;
+}
+
+.reg_1 select {
+    width: 100%;
+    border: none;
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid #666;
+    border-radius: 3px;
+}
+
+.reg_1 select:focus {
+    color: black;
+    background-color: #fff;
+    border-color: #fff;
+    outline: 0;
+    box-shadow: none;
+}
+
+.additional_info h4 {
+    color: #646262;
+    margin-bottom: 20px;
+}
+
+.hide {
+    display: none !important;
+}
+
+.studentSummary strong {
+    color: black;
+}
+
+.studentSummary label {
+    font-size: 13px !important;
+    color: #00000070 !important;
+    letter-spacing: 1px !important;
+}
+
+.studentSummary .btn {
+    padding: 3px 30px !important;
+    border: none;
+}
+
+.studentSummary {
+    border-bottom: 3px solid #e6e6e6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.studentSummaryPrevious strong {
+    color: black;
+}
+
+.studentSummaryPrevious label {
+    font-size: 13px !important;
+    color: #00000070 !important;
+    letter-spacing: 1px !important;
+}
+
+.studentSummaryPrevious .btn {
+    padding: 3px 30px !important;
+    border: none;
+}
+
+.studentSummaryPrevious {
+    border-bottom: 3px solid #e6e6e6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.studentSummary img {
+    height: 80px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+.singleStudentSummary strong {
+    color: black;
+}
+
+.singleStudentSummary label {
+    font-size: 13px !important;
+    color: #00000070 !important;
+    letter-spacing: 1px !important;
+}
+
+/* .singleStudentSummary .btn {
+    padding: 3px 30px !important;
+    border: none;
+} */
+
+.singleStudentSummary {
+    border-bottom: 3px solid #e6e6e6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+html {
+    --scrollbarBG: #CFD8DC;
+    --thumbBG: #90A4AE;
+}
+
+#reg_add_course_area::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+}
+
+#reg_add_course_area {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    overflow: auto;
+    padding: 0;
+}
+
+#reg_add_course_area::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+#reg_add_course_area::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+}
+
+.hide {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#reg_add_course_area::-webkit-scrollbar {
+    display: block !important;
+}
+
+#payBox span {
+    border: 4px solid #d7d7d7;
+    padding: 0px 13px;
+    border-radius: 100px;
+    background-color: #66b5ed;
+    margin-right: 20px;
+}
+
+#payBox h5 {
+    text-align: center;
+}
+
+#payBox {
+    padding-top: 40px;
+}
+
+html {
+    height: 100%
+}
+
+.table th {
+    border-top: none !important;
+}
+
+.table td {
+    border-top: 2px solid #dee2e6 !important;
+}
+
+.table {
+    color: black;
+}
+
+.payment label {
+    font-size: 14px !important;
+}
+
+.payment .col-md-8 {
+    border-right: 6px solid #e6e6e6;
+}
+
+#grad1 {
+    /* background-color:#9C27B0; */
+    /* background-image: linear-gradient(120deg, #FF4081, #81D4FA) */
+   /* background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% ); */
+    /* background-image: url('../img/bg.jpg'); */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    /* min-height: 100vh !important; */
+    font-family: montserrat !important;
+    background-color: #f1f2f7;
+    padding: 20px;
+    /* height: 100%; */
+    /* height: 100vh; */
+}
+
+#grad1 .card {
+    /* background-color: #fff; */
+    border: none !important;
+    /* box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2); */
+}
+
+#grad1 label {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #646262;
+    font-weight: bold;
+    letter-spacing: 0.1px;
+}
+
+#msform {
+    text-align: center;
+    position: relative;
+    /* margin: 20px 0px; */
+    margin: 20px 5px 10px 5px;
+}
+
+#msform fieldset .form-card {
+    background: #f1f1f1;
+    border: 0 none;
+    border-radius: 0px;
+    /* box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2); */
+    padding: 40px 20px 40px 20px;
+    box-sizing: border-box;
+    /* width: 100%; */
+    margin: 0 0 20px;
+    position: relative
+}
+
+@media (min-width: 768px) {
+    #msform fieldset .form-card {
+        margin: 0 20px 20px 20px;
+    }
+}
+
+.row.mb-25 > .col-md-6 + .col-md-6 {
+    margin-top: 25px;
+}
+
+@media (min-width: 768px) {    
+    .row.mb-25 > .col-md-6 + .col-md-6 {
+        margin-top: 0;
+    }
+}
+
+#msform fieldset {
+    background: #f1f1f1;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform fieldset .form-card {
+    text-align: left;
+    color: #9E9E9E
+}
+
+#msform .form-control,
+#msform textarea{
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    padding: .5rem 1rem;
+    transition: all .3s;
+    background-color: #fff;
+    margin-top: 2px;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 16px;
+}
+
+.mb-25 {     
+    margin-bottom: 25px;
+}
+
+#msform input:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    font-weight: bold;
+    border-bottom: 2px solid skyblue;
+    outline-width: 0
+}
+
+#msform .fa-arrow-right {
+    position: relative;
+    right: -25px;
+}
+
+#msform .fa-plus {
+    position: relative;
+    /* left: -25px; */
+}
+
+#msform .action-button {
+    margin: 10px 0;
+    font-family: montserrat;
+    font-size: 14px;
+    padding: 10px 50px;
+    text-align: center;
+    color: #FFF;
+    background-color: #456fb6;
+    border: 1px solid #456fb6;
+}
+
+#msform .action-button:hover {
+    color:#456fb6;
+    background-color: #fff;
+    border: 1px solid #456fb6;
+}
+
+/* #msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue
+} */
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161
+}
+
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #2C3E50;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: left
+}
+h5.fs-title {
+    font-size: 1rem;
+}
+
+#progressbar {
+    padding-top: 10px;
+    padding-left: 0;
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey;
+}
+
+#progressbar .active {
+    color: #000000
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 25%;
+    float: left;
+    position: relative
+}
+
+#progressbar #account:before {
+    /* font-family: FontAwesome; */
+    /* content: "\f023" */
+    /* width: 16px;
+    height: 16px;
+    content: " ";
+    background-image: url('http://localhost/teacher system/img/Parent_Info_Complete.png');
+    background-size: cover; */
+
+}
+
+#progressbar #personal:before {
+    /* font-family: FontAwesome;
+    content: "\f007" */
+}
+
+#progressbar #payment:before {
+    /* font-family: FontAwesome;
+    content: "\f09d" */
+}
+
+#progressbar #confirm:before {
+    /* font-family: FontAwesome;
+    content: "\f00c" */
+}
+
+#progressbar img {
+    max-width: 60px;
+    position: relative;
+    top: 0;
+}
+
+@media (min-width:1024px) {
+    #progressbar img {       
+        max-width: 90px;
+        position: relative;
+        top: -11px;
+    }
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #43a1dc
+}
+
+.radio-group {
+    position: relative;
+    margin-bottom: 25px
+}
+
+.radio {
+    display: inline-block;
+    width: 204;
+    height: 104;
+    border-radius: 0;
+    background: lightblue;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 8px 2px
+}
+
+.radio:hover {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3)
+}
+
+.radio.selected {
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1)
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+
+@media only screen and (max-width:425px) {
+    .mobileImmunizationBox {
+        display: block !important;
+    }
+
+    .mobileImmunizationBox img {
+        padding: 0 !important;
+    }
+
+    .next_to_step_2 {
+        position: relative;
+        top: -50px;
+    }
+
+    .agreementBox {
+        display: block !important;
+    }
+
+    .agreementBox .text1 {
+        padding: 0 !important;
+    }
+
+    .checkbox-inline {
+        width: 100% !important;
+    }
+
+    .OtherThanMobileView {
+        display: none !important;
+    }
+
+    .mobileView {
+        display: block !important;
+        color: black !important;
+    }
+
+    .fs-title {
+        font-size: 20px;
+    }
+
+    #reg_add_course_area .row div {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #reg_add_course_area .row select {
+        width: 93%;
+    }
+
+    .removeFLexOnMobile {
+        display: block !important;
+    }
+
+    .removeFLexOnMobile .next_to_student {
+        float: none !important;
+    }
+
+    .removeFLexOnMobile img {
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+
+    #signature_f_name,
+    #signature_l_name,
+    #signature_date {
+        width: 100% !important;
+    }
+
+}
+
+@media only screen and (min-width:426px) {
+    .OtherThanMobileView {
+        display: flex !important;
+    }
+
+    .mobileView {
+        display: none !important;
+    }
+
+}
+
+@media (min-width:768px) and (max-width:1301px) {
+    .mobileImmunizationBox {
+        max-width: 100% !important;
+        flex: 100% !important;
+    }
+}
+
+@media only screen and (max-width:425px) {
+
+    .studentSummary .col-md-8,
+    .studentSummary .col-md-2 {
+        padding-left: 15px !important;
+    }
+
+    .studentSummaryPrevious .action-button {
+        margin: 0 !important;
+    }
+
+    .studentSummaryPrevious .col-md-8,
+    .studentSummaryPrevious .col-md-2 {
+        padding-left: 15px !important;
+    }
+
+    .studentSummaryPrevious .action-button {
+        margin: 0 !important;
+    }
+
+
+    .singleStudentSummary .col-md-8,
+    .singleStudentSummary .col-md-2 {
+        padding-left: 15px !important;
+    }
+
+    .singleStudentSummary .action-button {
+        margin: 0 !important;
+    }
+
+    #msform fieldset .form-card {
+        padding: 0px 10px 0px 10px;
+    }
+}
+.equal-height {
+    height: 166px;
+}
+.save-btn{
+    margin: 10px 0 !important;
+    font-family: montserrat !important;
+    font-size: 14px !important;
+    padding: 10px 50px !important;
+    text-align: center !important;
+    color: #FFF !important;
+    background-color: #456fb6 !important;
+    border: 1px solid #456fb6 !important;
+    min-width: 175px;
+}
+.save-btn:hover{
+    background-color: #fff !important;
+    color: #456fb6 !important;
+    border: 1px solid #456fb6 !important;
+}
+h4{
+    line-height: 35px!important;
+}
+.save-btn:focus{
+    color: #456fb6 !important;
+    background-color: #fff!important;
+}
+
+/*  */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px !important;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border: 2px solid;
+    border-radius: 15px;
+}
+
+/* On mouse-over, add a grey background color */
+.student_application .container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.student_application .container input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.student_application .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.student_application .container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.student_application .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.image-upload>input {
+    display: none;
+}
+
+.image-frame {
+    border: 2px solid #dee2e6;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+.ask_reg_year_box button {
+    border: none;
+    width: 100%;
+    margin: 10px 0;
+    font-family: montserrat;
+    font-size: 18px;
+    padding: 50px 30px;
+    text-align: center;
+    transition: 0.5s;
+    color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0px 20px 18px -17px rgba(0, 0, 0, 1);
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 800;
+    border: none;
+    /* Option 1: Solid darker blue instead of gradient */
+    /* background-color: #456fb6; */
+    /* Option 2: Gradient with brightest part at far right */
+    background-image: linear-gradient(to right, #3a7bd5 0%, #3a7bd5 60%, #00d2ff 100%);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    white-space: normal !important;
+}
+
+@media (min-width: 1024px) {
+    .ask_reg_year_box button {
+        white-space: nowrap !important;
+    }
+}
+
+.ask_reg_year_box button:hover{
+    /* background-color:#fff!important ; */
+    /* color: #456fb6; */
+    border: none;
+}
+
+/* Tooltip in Student img */
+.custom-tooltip .tooltip-inner {
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+}
+.custom-tooltip.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: #333;
+}
+/* .add-c-table tr td{
+    min-width:200px;
+} */
+.add-c-table {
+    border: none;
+}
+
+[type=button], [type=submit], button {
+    background-color: #456fb6;
+    color: #fff;
+}
+
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* overflow: hidden; */
+}
+
+.modern-table thead {
+    background-color: #bc9f5e !important;
+    color: white !important;
+    text-align: left;
+}
+
+.modern-table th, .modern-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.modern-table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.modern-table tbody tr:nth-child(even) {
+    background-color: #fff;
+}
+
+.modern-table tbody tr:hover {
+    background-color: #d7e3fc;
+    cursor: pointer;
+}
+
+.modern-table th {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #bc9f5e !important;
+    color: #fff;
+}
+#reg_add_course_area .grade select {
+    width: 170px;
+}
+#reg_add_course_area .credit  select {
+    width: 80px;
+}
+#reg_add_course_area .additional  select {
+    width: 150px;
+}
+#reg_add_course_area .schedule  select {
+    width: 120px;
+}
+
+#reg_add_course_area .table.add-c-table.modern-table tbody > tr > td.text-center > div {
+    width: auto !important;
+    white-space: nowrap;
+}
