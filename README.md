@@ -49,10 +49,5 @@ A comprehensive WordPress plugin for managing school portal access, student regi
 - Main plugin: GPL2
 - PayPal SDK: See `paypal/vendor/paypal/rest-api-sdk-php/LICENSE`
 
-## Support
-For questions or support, contact:
-- **Email:** admin@graduatesacademy.com
-- **Phone:** (865) 564-4810
-
 ---
 *This plugin is developed and maintained by Subham Akhuli*
